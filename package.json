@@ -7,7 +7,7 @@
     "brand2": "vite serve module.brand2",
     "build": "vite build",
     "build+brand1": "vite build module.brand1",
-    "build+panel": "vite build module.panel module.brand1",
+    "build+b1+p": "vite build module.brand1 & vite build module.panel",
     "serve": "vite preview"
   },
   "dependencies": {
