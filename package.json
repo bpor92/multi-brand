@@ -8,12 +8,14 @@
     "build": "vite build",
     "build+brand1": "vite build module.brand1",
     "build+b1+p": "vite build module.brand1 & vite build module.panel",
+    "serve+b1+p": "vite serve module.brand1 & vite serve module.panel",
     "serve": "vite preview"
   },
   "dependencies": {
     "module.brand1": "file:module.brand1",
     "module.brand2": "file:module.brand2",
     "module.panel": "file:module.panel",
+    "vite-plugin-history": "^1.0.2",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12"
   },
