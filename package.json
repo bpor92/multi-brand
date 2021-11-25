@@ -1,0 +1,25 @@
+{
+  "name": "vite-project",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "brand1": "vite serve module.brand1",
+    "brand2": "vite serve module.brand2",
+    "build": "vite build",
+    "build+brand1": "vite build module.brand1",
+    "build+panel": "vite build module.panel module.brand1",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "module.brand1": "file:module.brand1",
+    "module.brand2": "file:module.brand2",
+    "module.panel": "file:module.panel",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "sass": "^1.43.4",
+    "vite": "^2.6.4"
+  }
+}
