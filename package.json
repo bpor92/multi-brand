@@ -5,11 +5,11 @@
     "dev": "vite",
     "brand1": "vite serve module.brand1",
     "brand2": "vite serve module.brand2",
+    "panel": "vite serve module.panel",
     "build": "vite build",
-    "build+brand1": "vite build module.brand1",
-    "build+b1+p": "vite build module.brand1 & vite build module.panel",
-    "serve+b1+p": "vite serve module.brand1 & vite serve module.panel",
-    "serve": "vite preview"
+    "build:brand1": "vite build module.brand1 && vite build module.panel",
+    "watch:brand1+p": "vite serve module.brand1 && vite serve module.panel",
+    "serve": "vite preview module.brand1"
   },
   "dependencies": {
     "module.brand1": "file:module.brand1",

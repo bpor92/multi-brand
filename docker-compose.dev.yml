@@ -1,0 +1,18 @@
+version: '3'
+services:
+  node:
+    image: node:14.18.1
+    ports:
+      - 80:3000
+      - 3000:300
+      - 7003:3000
+    user: node
+    volumes:
+      - ./:/app:rw
+      - ./module.panel/dist :/app/module.brand1/panel
+
+    working_dir: /app
+    command: sh -c "npm i && npm run ${NPM_RUN:-watch}"
+
+networks:
+  app:

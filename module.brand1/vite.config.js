@@ -1,16 +1,14 @@
 import { defineConfig } from 'vite'
 import commonConfig from '../vite.common.config'
-import history from 'vite-plugin-history'
 
 const path = require('path')
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    assetsDir: ''
+  },
   plugins: [
     ...commonConfig.plugins,
-    history(
-      { from: /\/panel/, to: '/panel/index.html' }
-    )
   ],
   resolve: {
     alias: {

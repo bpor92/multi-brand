@@ -1,0 +1,27 @@
+FROM node:14.18.1 as build-stage
+ENV PATH /app/node_modules/.bin:$PATH
+ARG BRANDING=brand1
+
+RUN echo "branding: ${BRANDING}"
+RUN mkdir -p ./app
+
+WORKDIR /app
+
+COPY package*.json ./
+COPY . .
+
+RUN npm install
+RUN npm run build:${BRANDING}
+
+# production stage
+FROM nginx:stable as production-stage
+
+ARG BRANDING=brand1
+
+RUN echo "production-stage branding: ${BRANDING}"
+
+COPY --from=build-stage /app/module.${BRANDING}/dist /usr/share/nginx/html
+COPY --from=build-stage /app/docker/nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
