@@ -7,9 +7,9 @@
     "brand2": "vite serve module.brand2",
     "panel": "vite serve module.panel",
     "build": "vite build",
-    "build:brand1": "vite build module.brand1 && vite build module.panel",
+    "build:brand1": "vite build module.brand1",
     "watch:brand1+p": "vite serve module.brand1 && vite serve module.panel",
-    "serve": "vite preview module.brand1"
+    "serve": "vite preview"
   },
   "dependencies": {
     "module.brand1": "file:module.brand1",
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
     "sass": "^1.43.4",
-    "vite": "^2.6.4"
+    "vite": "^2.6.4",
+    "vite-plugin-components": "^0.13.3"
   }
 }
