@@ -2,19 +2,14 @@
   "name": "vite-project",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "brand1": "vite serve module.brand1",
-    "brand2": "vite serve module.brand2",
-    "panel": "vite serve module.panel",
-    "build": "vite build",
-    "build:brand1": "vite build module.brand1",
-    "watch:brand1+p": "vite serve module.brand1 && vite serve module.panel",
-    "serve": "vite preview"
+    "build:brand1": "vite build module.brand1 --config vite.brand1.config.js",
+    "serve:brand1": "vite serve module.brand1 --config vite.brand1.config.js",
+    "preview.brand1": "vite preview --config vite.brand1.config.js"
   },
   "dependencies": {
-    "module.brand1": "file:module.brand1",
-    "module.brand2": "file:module.brand2",
-    "module.panel": "file:module.panel",
+    "module.brand1": "1.0.0",
+    "module.brand2": "1.0.0",
+    "module.panel": "1.0.0",
     "vite-plugin-history": "^1.0.2",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12"
