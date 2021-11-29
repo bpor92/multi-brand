@@ -4,11 +4,10 @@ import { createRouter, createWebHistory  } from 'vue-router'
 const Raports = () => import('./components/Raports.vue')
 
 const routes = [
-    { path: 'panel/raports', name: 'Raports', component: Raports },
+    { path: '/raports', name: 'Raports', component: Raports },
 ]
-
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('panel'),
     routes
 })
 
