@@ -1,0 +1,11 @@
+version: '3'
+services:
+    panel:
+        image: node:14.18.1
+        # user: node
+        ports:
+        - 7000:3000
+        volumes:
+        - ./panel:/web:rw
+        working_dir: /web
+        command:  sh -c "npm install && npm run dev"
