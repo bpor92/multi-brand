@@ -19,7 +19,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, './module.brand1/index.html'),
-        panel: path.resolve(__dirname, './module.brand1/panel.html'),
       },
       output: {
         chunkFileNames: () => {
@@ -28,5 +27,14 @@ export default defineConfig({
       }
     },
     outDir: './dist'
+  },
+  server: {
+    proxy: {
+      '/panel':{
+        target:'http://localhost:3003/',
+        changeOrigin:true,
+        rewrite:(path)=> path.replace(/^\/panel/,'')
+      },
+    }
   }
 })
