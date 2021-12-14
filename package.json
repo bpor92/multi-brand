@@ -2,9 +2,9 @@
   "name": "vite-project",
   "version": "0.0.0",
   "scripts": {
-    "build:brand1": "vite build module.brand1 --config vite.brand1.config.js",
-    "serve:brand1": "vite serve module.brand1 --config vite.brand1.config.js",
-    "preview.brand1": "vite preview module.brand1 --config vite.brand1.config.js"
+    "build:brand1": "vite build --config vite.brand1.config.js",
+    "serve:brand1": "vite serve module.brand1  --config vite.brand1.config.js",
+    "preview.brand1": "vite preview module.brand1"
   },
   "dependencies": {
     "module.brand1": "1.0.0",

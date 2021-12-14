@@ -19,14 +19,15 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, './module.brand1/index.html'),
-        panel: path.resolve(__dirname, './module.brand1/panel.html'),
-      },
-      output: {
-        chunkFileNames: () => {
-         return 'brand1.[name].[hash].js'
-        },
+        panel: path.resolve(__dirname, './module.panel/panel.html'),
       }
     },
-    outDir: './dist'
-  }
+    outDir: './module.brand1/dist'
+  },
+  // server: {
+  //   fs: {
+  //     strict: false,
+  //     allow: ['..']
+  //   }
+  // }
 })
