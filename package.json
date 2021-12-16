@@ -2,12 +2,13 @@
   "name": "vite-project",
   "version": "0.0.0",
   "scripts": {
+    "serve:brand1": "vite serve --config vite.brand1.config.js",
     "build:brand1": "vite build --config vite.brand1.config.js",
-    "serve:brand1": "vite serve module.brand1  --config vite.brand1.config.js --host 0.0.0.0",
-    "preview:brand1": "vite preview module.brand1",
+    "preview:brand1": "vite preview --config vite.brand1.config.js",
+
+    "serve:panel": "vite serve --config vite.panel.config.js",
     "build:panel": "vite build --config vite.panel.config.js",
-    "serve:panel": "vite serve module.panel  --config vite.panel.config.js --host 0.0.0.0",
-    "preview:panel": "vite preview module.panel"
+    "preview:panel": "vite preview --config vite.panel.config.js"
   },
   "dependencies": {
     "module.brand1": "1.0.0",

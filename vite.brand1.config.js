@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 const path = require('path')
 
 export default defineConfig({
-  root: './',
+  root: './module.brand1',
   plugins: [
     vue()
   ],
@@ -12,26 +12,30 @@ export default defineConfig({
     alias: {
       '@ui': path.resolve(__dirname, './module.ui/src/ui'),
       '@': path.resolve(__dirname, './module.brand1/src'),
-      '@panel': path.resolve(__dirname, './module.panel/src')
     },
-  },
-  build: {
-    rollupOptions: {
-      input: {
-        index: path.resolve(__dirname, './module.brand1/index.html'),
-      }
-    },
-    outDir: './module.brand1/dist'
   },
   server: {
+    host: true,
     proxy: {
       '/panel': {
-        target: 'http://localhost:8081/'
-      }
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        autoRewrite: true,
+        hostRewrite: true,
+        // rewrite: (path) => {
+        //   // console.log(path)
+        //   return path.replace(/^\/panel/, '')
+        //   // return 'http://localhost:8081/panel'
+        // }
+      },
+      '/api': {
+        target: 'http://jsonplaceholder.typicode.com',
+        changeOrigin: true,
+        rewrite: (path) => {
+          console.log(path, path.replace(/^\/api/, ''))
+          return path.replace(/^\/api/, '')
+        } 
+      },
     }
-    // fs: {
-    //   strict: false,
-    //   allow: ['..']
-    // }
   }
 })

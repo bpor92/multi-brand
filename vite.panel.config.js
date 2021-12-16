@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 const path = require('path')
 
 export default defineConfig({
-  root: './',
+  root: './module.panel',
   plugins: [
     vue()
   ],
@@ -14,15 +14,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, './module.panel/src'),
     },
   },
-  build: {
-    // rollupOptions: {
-    //   input: {
-    //     index: path.resolve(__dirname, './module.panel/panel.html'),
-    //   }
-    // },
-    outDir: './module.panel/dist'
-  },
   server: {
+    host: true,
     // proxy: {
     //   '/': {
     //     target: 'http://localhost:3000/'
