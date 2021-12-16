@@ -19,15 +19,19 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, './module.brand1/index.html'),
-        panel: path.resolve(__dirname, './module.panel/panel.html'),
       }
     },
     outDir: './module.brand1/dist'
   },
-  // server: {
-  //   fs: {
-  //     strict: false,
-  //     allow: ['..']
-  //   }
-  // }
+  server: {
+    proxy: {
+      '/panel': {
+        target: 'http://localhost:8081/'
+      }
+    }
+    // fs: {
+    //   strict: false,
+    //   allow: ['..']
+    // }
+  }
 })

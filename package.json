@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "build:brand1": "vite build --config vite.brand1.config.js",
-    "serve:brand1": "vite serve module.brand1  --config vite.brand1.config.js",
-    "preview.brand1": "vite preview module.brand1"
+    "serve:brand1": "vite serve module.brand1  --config vite.brand1.config.js --host 0.0.0.0",
+    "preview:brand1": "vite preview module.brand1",
+    "build:panel": "vite build --config vite.panel.config.js",
+    "serve:panel": "vite serve module.panel  --config vite.panel.config.js --host 0.0.0.0",
+    "preview:panel": "vite preview module.panel"
   },
   "dependencies": {
     "module.brand1": "1.0.0",

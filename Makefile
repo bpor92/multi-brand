@@ -11,15 +11,14 @@ else
 	npm = dev
 endif
 
-## Start containers STANDARD
 brand1-up:
 	@make init
-	NPM_RUN=watch:standard $(shell echo $(path) 'up --force-recreate')
+	NPM_RUN=serve:brand1 $(shell echo $(path) 'up --force-recreate')
 
 ## Start containers STANDARD
-brand1+p-up:
+panel-up:
 	@make init
-	NPM_RUN=watch:brand1+p $(shell echo $(path) 'up --force-recreate')
+	NPM_RUN=serve:panel $(shell echo $(path) 'up --force-recreate')
 
 ## Stop containers
 stop:
