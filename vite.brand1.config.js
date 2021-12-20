@@ -16,6 +16,7 @@ export default defineConfig({
   },
   server: {
     host: true,
+    port: '3000',
     proxy: {
       // '/panel': {
       //   target: 'http://localhost:8081/panel',
@@ -39,7 +40,7 @@ export default defineConfig({
         rewrite: (path) => {
           console.log(path, path.replace(/^\/api/, ''))
           return path.replace(/^\/api/, '')
-        } 
+        }
       },
     }
   }

@@ -4,8 +4,8 @@
     <HelloWorld msg="Hello Vue 3 + Vite" />
     Brand1
     <router-link to="/test">Test</router-link>
-    <a href="http://localhost:8081/panel">panel</a>
-    
+    <a href="/panel/">panel</a>
+
   </div>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
-    Panel
+    Panel ewfew
     <router-view />
     <div>
-        <a href="http://localhost:3005/test">Powrót do brandu</a>
+        <a href="/">Powrót do brandu</a>
     </div>
     <br/>
     <router-link to="/raports"> Raporty </router-link>

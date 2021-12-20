@@ -7,7 +7,7 @@ const routes = [
     { path: '/raports', name: 'Raports', component: Raports },
 ]
 const router = createRouter({
-    history: createWebHistory('panel'),
+    history: createWebHistory(),
     routes
 })
 

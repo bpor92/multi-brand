@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 const path = require('path')
 
 export default defineConfig({
+  base: '/panel',
   root: './module.panel',
   plugins: [
     vue()
@@ -16,11 +17,11 @@ export default defineConfig({
   },
   server: {
     host: true,
-    // proxy: {
+    proxy: {
     //   '/': {
-    //     target: 'http://localhost:3000/'
+    //     target: '/panel/'
     //   }
-    // },
-    port: '8081'
+    },
+    port: '3001'
   }
 })

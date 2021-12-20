@@ -5,15 +5,11 @@
     "serve:brand1": "vite serve --config vite.brand1.config.js",
     "build:brand1": "vite build --config vite.brand1.config.js",
     "preview:brand1": "vite preview --config vite.brand1.config.js",
-
     "serve:panel": "vite serve --config vite.panel.config.js",
     "build:panel": "vite build --config vite.panel.config.js",
     "preview:panel": "vite preview --config vite.panel.config.js"
   },
   "dependencies": {
-    "module.brand1": "1.0.0",
-    "module.brand2": "1.0.0",
-    "module.panel": "1.0.0",
     "vite-plugin-history": "^1.0.2",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12"
