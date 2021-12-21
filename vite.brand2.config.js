@@ -1,21 +1,9 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-
-const path = require('path')
+import { prepareConfig } from './vite.common.config'
 
 export default defineConfig({
-  root: './module.brand2',
-  plugins: [
-    vue()
-  ],
-  resolve: {
-    alias: {
-      '@ui': path.resolve(__dirname, './module.ui/src/ui'),
-      '@': path.resolve(__dirname, './module.brand2/src'),
-    },
-  },
-  server: {
-    host: true,
-    port: '3000'
-  }
+  ...prepareConfig({ 
+    brand: 'brand2',
+    port: 3000
+  })
 })
