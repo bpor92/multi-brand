@@ -5,6 +5,9 @@
     "serve:brand1": "vite serve --config vite.brand1.config.js",
     "build:brand1": "vite build --config vite.brand1.config.js",
     "preview:brand1": "vite preview --config vite.brand1.config.js",
+    "serve:brand2": "vite serve --config vite.brand2.config.js",
+    "build:brand2": "vite build --config vite.brand2.config.js",
+    "preview:brand2": "vite preview --config vite.brand2.config.js",
     "serve:panel": "vite serve --config vite.panel.config.js",
     "build:panel": "vite build --config vite.panel.config.js",
     "preview:panel": "vite preview --config vite.panel.config.js"
