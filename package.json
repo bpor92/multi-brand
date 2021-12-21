@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "accounting-app-v2",
   "version": "0.0.0",
   "scripts": {
     "serve:brand1": "vite serve --config vite.brand1.config.js",
@@ -13,14 +13,12 @@
     "preview:panel": "vite preview --config vite.panel.config.js"
   },
   "dependencies": {
-    "vite-plugin-history": "^1.0.2",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
     "sass": "^1.43.4",
-    "vite": "^2.6.4",
-    "vite-plugin-components": "^0.13.3"
+    "vite": "^2.6.4"
   }
 }

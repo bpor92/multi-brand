@@ -4,10 +4,19 @@
 name = app
 path = docker-compose -f docker-compose.yml -f docker-compose.dev.yml
 
+
+init:
+	cp -n envconfig.dist.js envconfig.js
+	cp -n envconfig.js module.brand1/envconfig.js
+	cp -n envconfig.js module.brand2/envconfig.js
+	cp -n envconfig.js module.panel/envconfig.js
+
 brand1-up:
+	@make init
 	BRANDING=brand1 $(shell echo $(path) 'up --force-recreate')
 
 brand2-up:
+	@make init
 	BRANDING=brand2 $(shell echo $(path) 'up --force-recreate')
 
 ## Stop containers
