@@ -1,6 +1,6 @@
 FROM node:14.18.1 as build-stage
 ENV PATH /app/node_modules/.bin:$PATH
-ARG BRANDING=brand1
+ARG BRANDING=brand2
 
 RUN echo "branding: ${BRANDING}"
 RUN mkdir -p ./app
@@ -16,7 +16,7 @@ RUN npm run serve:${BRANDING}
 # production stage
 FROM nginx:stable as production-stage
 
-ARG BRANDING=brand1
+ARG BRANDING=brand2
 
 RUN echo "production-stage branding: ${BRANDING}"
 

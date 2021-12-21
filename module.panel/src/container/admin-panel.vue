@@ -1,3 +1,3 @@
 <template>
-  Admin panel
+  Admin panel fewfwef
 </template>

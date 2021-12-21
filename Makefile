@@ -2,24 +2,13 @@
 .SILENT:
 
 name = app
+path = docker-compose -f docker-compose.yml -f docker-compose.dev.yml
 
-ifeq ($(e), prod)
-    path = docker-compose -f docker-compose.yml
-	npm = build
-else
-    path = docker-compose -f docker-compose.yml -f docker-compose.dev.yml
-	npm = dev
-endif
-
-## Start containers STANDARD
 brand1-up:
-	@make init
-	NPM_RUN=watch:standard $(shell echo $(path) 'up --force-recreate')
+	BRANDING=brand1 $(shell echo $(path) 'up --force-recreate')
 
-## Start containers STANDARD
-brand1+p-up:
-	@make init
-	NPM_RUN=watch:brand1+p $(shell echo $(path) 'up --force-recreate')
+brand2-up:
+	BRANDING=brand2 $(shell echo $(path) 'up --force-recreate')
 
 ## Stop containers
 stop:
@@ -38,7 +27,6 @@ connect:
 ## Execute a command in a running container, e.g: make exec s=nginx c=bash
 exec:
 	$(shell echo '@-' $(path) 'exec' $(s) $(c))
-
 
 ## Clean dist in brand folder
 dist-clean:
