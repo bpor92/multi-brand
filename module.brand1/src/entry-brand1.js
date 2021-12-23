@@ -1,8 +1,19 @@
-import { createApp } from 'vue'
-import App from './App.vue'
 import './scss/brand1.scss'
-import router from './routes'
+import routes from './routes'
+import Vue from 'vue';
+import App from './App.vue';
+import VueRouter from 'vue-router'
 
-createApp(App)
-    .use(router)
-    .mount('#app')
+Vue.use(VueRouter)
+
+
+const router = new VueRouter({
+    mode: 'history',
+    linkActiveClass: 'active',
+    routes
+  })
+
+new Vue({
+  render: (h) => h(App),
+  router
+}).$mount('#app');

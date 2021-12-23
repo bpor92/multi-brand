@@ -1,3 +1,5 @@
 <template>
-  Admin panel fewfwef
+  <div>
+    Admin panel fewfwef
+  </div>
 </template>

@@ -1,5 +1,4 @@
 
-import { createRouter, createWebHistory  } from 'vue-router'
 import products from '../../module.common/module.products/routes'
 
 const Home = () => import('./components/Home.vue')
@@ -11,9 +10,4 @@ const routes = [
     ...products
 ]
 
-const router = createRouter({
-    history: createWebHistory(),
-    routes
-})
-
-export default router
+export default routes

@@ -1,8 +1,10 @@
 <template>
-    <router-view />
     <div>
-        <a href="/">Powrót do brandu</a>
+        <router-view />
+        <div>
+            <a href="/">Powrót do brandu</a>
+        </div>
+        <br/>
+        <router-link to="/raports"> Raporty </router-link>
     </div>
-    <br/>
-    <router-link to="/raports"> Raporty </router-link>
 </template>

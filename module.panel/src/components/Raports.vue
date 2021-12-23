@@ -1,3 +1,5 @@
 <template>
-    Raportssssss
+    <div>
+        Raportssssss
+    </div>
 </template>

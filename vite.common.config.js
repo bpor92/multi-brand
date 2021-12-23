@@ -1,11 +1,11 @@
-import vue from '@vitejs/plugin-vue'
+const { createVuePlugin } = require('vite-plugin-vue2');
 
 const path = require('path')
 
 export const prepareConfig = ({brand, port}) =>  ({
   root: `./module.${brand}`,
   plugins: [
-    vue()
+    createVuePlugin()
   ],
   resolve: {
     alias: {

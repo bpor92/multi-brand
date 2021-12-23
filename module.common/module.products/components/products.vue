@@ -1,3 +1,6 @@
 <template>
-    produkty
+    <div>
+        produkty
+
+    </div>
 </template>
